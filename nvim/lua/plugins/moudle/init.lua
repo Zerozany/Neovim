@@ -1,0 +1,6 @@
+require('plugins.moudle.nvim-tree')
+require('plugins.moudle.neoscroll')
+require('plugins.moudle.telescope')
+require('plugins.moudle.illuminate')
+require('plugins.moudle.treesitter')
+require('plugins.moudle.gitsigns')

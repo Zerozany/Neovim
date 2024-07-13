@@ -1,0 +1,5 @@
+require('core.utils')
+require('core.basic')
+require('core.keymap')
+require('core.script')
+require('core.symbols')
