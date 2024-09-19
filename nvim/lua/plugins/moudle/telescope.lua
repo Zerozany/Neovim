@@ -66,7 +66,7 @@ table.insert(Zero.plugins, {
         local builtin = require('telescope.builtin')
         -- @param 查找文件
         vim.keymap.set('n', '<leader>f', builtin.find_files, {})
-        -- @param 在所有文件中进行实时搜索
+        -- @param 在所有文件中进行实时搜索  sudo apt-get install ripgrep
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
         -- @param 用于列出当前缓冲区
         vim.keymap.set('n', '<leader><space>', builtin.buffers, {})

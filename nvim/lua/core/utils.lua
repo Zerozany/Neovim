@@ -8,7 +8,7 @@ if not Zero.utils then
     Zero.utils = {}
 end
 
--- @param 基本核心设置函数
+-- @param 基本设置函数
 -- @param def options setting
 function Zero.utils.set_options(options)
     for k, v in pairs(options) do

@@ -5,9 +5,9 @@ end
 
 Zero.options = {
     -- 设置光标移动至窗口顶部或底部时保持在屏幕中间
-    scrolloff = math.floor((vim.fn.winheight(0) - 1) / 2),
+    -- scrolloff = math.floor((vim.fn.winheight(0) - 1) / 2),
     -- 设置光标移动至窗口左侧或右侧时保持在屏幕中间
-    sidescrolloff = math.floor((vim.fn.winwidth(0) - 1) / 2),
+    -- sidescrolloff = math.floor((vim.fn.winwidth(0) - 1) / 2),
     -- 行首不显示 ~ 符号
     fillchars = { eob = ' ' },
     -- 设置行号

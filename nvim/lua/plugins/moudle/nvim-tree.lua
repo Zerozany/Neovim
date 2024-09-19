@@ -26,9 +26,9 @@ table.insert(Zero.plugins, {
                 -- 文件树显示位置
                 side = 'left',
                 -- 不显示行号
-                number = false,
+                number = true,
                 -- 不显示相对行号
-                relativenumber = false,
+                relativenumber = true,
                 -- 显示标记列
                 signcolumn = 'auto',
                 -- 浮动窗口，默认关闭

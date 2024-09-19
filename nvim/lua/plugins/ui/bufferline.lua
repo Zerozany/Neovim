@@ -28,7 +28,7 @@ table.insert(Zero.plugins, {
                 -- @param "coc"（使用 coc.nvim 插件的诊断）
                 diagnostics = 'nvim_lsp',
                 -- 如果设置为 false，插入模式下不会更新诊断信息，只有在退出插入模式后才会更新
-                diagnostics_update_in_insert = fasle,
+                diagnostics_update_in_insert = false,
                 -- 标签显示诊断图标
                 diagnostics_indicator = function(_, _, diagnostics_dict, _)
                     local s = ' '

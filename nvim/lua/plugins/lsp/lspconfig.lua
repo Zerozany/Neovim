@@ -31,5 +31,5 @@ table.insert(Zero.plugins, {
     end,
 })
 
--- 示例：映射一个按键来在源文件和头文件之间切换
+-- 映射一个按键来在源文件和头文件之间切换
 vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>ClangdSwitchSourceHeader<CR>', { noremap = true, silent = true })
