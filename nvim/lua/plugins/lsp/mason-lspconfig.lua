@@ -1,5 +1,5 @@
 -- lua/plugins/mason-lspconfig.lua
--- @param mason-lspconfig
+-- @param mason-lspconfig 旨在将安装的工具与 Neovim 的 LSP 客户端进行集成
 if not Zero.plugins then
     Zero.plugins = {}
 end
@@ -9,7 +9,9 @@ table.insert(Zero.plugins, {
     config = function()
         require('mason-lspconfig').setup({
             ensure_installed = {
-                'lua_ls', -- Lua 语言服务器
+                -- 'lua_ls',  -- Lua LSP
+                -- 'clangd',  -- C/C++ LSP
+                -- 'cmake',   -- CMake LSP
             },
             automatic_installation = true,
         })

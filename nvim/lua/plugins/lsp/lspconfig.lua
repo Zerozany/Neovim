@@ -1,5 +1,4 @@
 -- lua/plugins/lspconfig.lua
--- @param lspconfig
 if not Zero.plugins then
     Zero.plugins = {}
 end
@@ -17,19 +16,30 @@ table.insert(Zero.plugins, {
         })
 
         local lspconfig = require('lspconfig')
-
-        -- lua
+        -- 配置 Lua LSP
         lspconfig.lua_ls.setup({
             settings = {
                 Lua = {
                     diagnostics = {
-                        globals = { 'vim' },
+                        -- 允许使用 vim 全局变量
+                        globals = { 'vim' }, 
                     },
                 },
+            },
+        })
+        -- 配置 C/C++ LSP
+        lspconfig.clangd.setup({
+            cmd = { "clangd" },  
+            init_options = {
+                clangdFileStatus = true,
+                -- 添加 C++23 标准作为初始化选项
+                usePlaceholders = true, 
+                fallbackFlags = { "--std=c++23" },  
+            },
+            flags = {
+                debounce_text_changes = 150,
             },
         })
     end,
 })
 
--- 映射一个按键来在源文件和头文件之间切换
-vim.api.nvim_set_keymap('n', '<leader>q', '<cmd>ClangdSwitchSourceHeader<CR>', { noremap = true, silent = true })

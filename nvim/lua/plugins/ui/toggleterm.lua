@@ -1,5 +1,5 @@
 -- lua/plugins/toggleterm.lua
--- @param 终端
+-- @param terminal
 if not Zero.plugins then
     Zero.plugins = {}
 end
@@ -30,10 +30,10 @@ table.insert(Zero.plugins, {
             -- 设置默认的 shell
             shell = vim.o.shell,
             float_opts = {
-                -- 浮动终端窗口的边框样式（'single', 'double', 'shadow' 等）
+                -- 浮动终端窗口的边框样式（'single', 'double', 'shadow' 'curved' 等）
                 border = 'curved',
-                -- 设置浮动窗口的不透明度
-                winblend = 3,
+                -- 设置浮动窗口的不透明度(0,100)
+                winblend = 0,
             },
         })
     end,

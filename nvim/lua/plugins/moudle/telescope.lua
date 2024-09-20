@@ -33,13 +33,17 @@ table.insert(Zero.plugins, {
                 path_display = { 'smart' },
                 -- 配置显示 preview 窗口
                 preview = {
-                    treesitter = true, -- 使用 treesitter 进行语法高亮
-                    msg_bg_fillchar = ' ', -- 背景填充字符
-                    wrap = true, -- 是否换行
+                    -- 使用 treesitter 进行语法高亮
+                    treesitter = true, 
+                    -- 背景填充字符
+                    msg_bg_fillchar = ' ', 
+                    -- 是否换行
+                    wrap = true, 
                 },
                 -- 自定义显示行为
                 layout_config = {
-                    preview_cutoff = 30, -- 小于此宽度时不显示预览窗口
+                    -- 小于此宽度时不显示预览窗口
+                    preview_cutoff = 30, 
                 },
             },
             -- 配置特定选择器的行为
@@ -64,11 +68,11 @@ table.insert(Zero.plugins, {
         })
 
         local builtin = require('telescope.builtin')
-        -- @param 查找文件
+        -- @param 搜索文件
         vim.keymap.set('n', '<leader>f', builtin.find_files, {})
-        -- @param 在所有文件中进行实时搜索  sudo apt-get install ripgrep
+        -- @param 在所有文件中搜索指定文本  sudo apt-get install ripgrep
         vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-        -- @param 用于列出当前缓冲区
+        -- @param 用于列出当前所有的已打开文件缓冲区
         vim.keymap.set('n', '<leader><space>', builtin.buffers, {})
         -- @param 用于查看帮助标签
         vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})

@@ -1,5 +1,5 @@
 -- lua/plugins/mason-tool.lua
--- @param mason-tool
+-- @param mason-tool 专注于工具的安装和管理
 if not Zero.plugins then
     Zero.plugins = {}
 end
@@ -8,11 +8,11 @@ table.insert(Zero.plugins, {
     'WhoIsSethDaniel/mason-tool-installer.nvim',
     config = function()
         require('mason-tool-installer').setup({
-            -- :mason
+            -- :Mason
             ensure_installed = {
-                -- 提供 Lua 语言的语言服务器协议 (LSP) 支持
-                'stylua',
-                'lua-language-server',
+                -- 'stylua',           -- Lua 格式化工具
+                -- 'lua-language-server', -- Lua LSP
+                -- 'clangd',          -- C/C++ LSP
             },
             auto_update = true,
         })

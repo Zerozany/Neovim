@@ -13,6 +13,7 @@ table.insert(Zero.plugins, {
             providers = {
                 'lsp',
                 'treesitter',
+                'regex',
             },
         })
     end,

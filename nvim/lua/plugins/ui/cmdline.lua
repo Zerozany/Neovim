@@ -23,9 +23,18 @@ table.insert(Zero.plugins, {
                 },
                 size = {
                     width = '60%',
+                    -- 弹出窗口的高度（行数）
+                    height = 1,             
                 },
                 border = {
+                     -- 设置边框样式：'single', 'double', 'rounded', 'solid'
                     style = 'rounded',
+                    text = {
+                        -- 设置边框上方的文本
+                        top = Zero.symbols.Definition .. ' ZeroNvim ',  
+                        -- 文本居中
+                        top_align = 'center', 
+                    },
                 },
                 win_options = {
                     winhighlight = 'Normal:Normal,FloatBorder:FloatBorder',

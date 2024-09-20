@@ -33,15 +33,15 @@ table.insert(Zero.plugins, {
                 signcolumn = 'auto',
                 -- 浮动窗口，默认关闭
                 float = {
-                    enable = false,
+                    enable = true,
                     quit_on_focus_loss = true,
                     open_win_config = {
                         relative = 'editor',
                         border = 'rounded',
-                        width = 50,
-                        height = 15,
-                        row = 3,
-                        col = 30,
+                        width = math.floor(vim.fn.winwidth(0) * 0.8),  -- 50% 的窗口宽度
+                        height = math.floor(vim.fn.winheight(0) * 0.8), -- 70% 的窗口高度
+                        row = math.floor(vim.fn.winheight(0) * 0.15),   -- 从顶部偏移 15%
+                        col = math.floor(vim.fn.winwidth(0) * 0.10),   -- 从左边向右偏移25%
                     },
                 },
                 -- 文件类型图标及高亮

@@ -9,8 +9,6 @@ table.insert(Zero.plugins, {
     dependencies = {
         'nvim-treesitter/playground',
     },
-    -- 插件的主要配置模块为 nvim-treesitter.configs
-    main = 'nvim-treesitter.configs',
     -- 自动更新 nvim-treesitter 的解析器
     build = ':TSUpdate',
     config = function()

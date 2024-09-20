@@ -60,4 +60,5 @@ Zero.symbols = {
     Value = '󰎠 ',
     Variable = '󰀫 ',
     Warn = ' ',
+	Exit = '➥ ',
 }

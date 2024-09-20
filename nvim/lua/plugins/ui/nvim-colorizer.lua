@@ -8,12 +8,14 @@ table.insert(Zero.plugins, {
     'norcalli/nvim-colorizer.lua',
     config = function()
         require('colorizer').setup({
-            'cpp',
-            'c',
-            'python',
-            'lua',
-            'bash',
-            'json',
+            filetypes = {            
+                'cpp',
+                'c',
+                'python',
+                'lua',
+                'shell',
+                'json', 
+            },
         })
     end,
 })

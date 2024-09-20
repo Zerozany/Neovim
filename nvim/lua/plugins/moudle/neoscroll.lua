@@ -26,11 +26,7 @@ table.insert(Zero.plugins, {
             post_hook = nil,
             -- 性能模式，默认为关闭
             performance_mode = false,
-        })
-        -- 自定义按键设置
-        require('neoscroll.config').set_mappings({
-            ['<C-u>'] = { 'scroll', { '-vim.wo.scroll', 'true', '250' } },
-            ['<C-d>'] = { 'scroll', { 'vim.wo.scroll', 'true', '250' } },
+            mappings = {'<C-u>', '<C-d>'}
         })
     end,
 })
